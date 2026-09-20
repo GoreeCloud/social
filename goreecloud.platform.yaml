@@ -4,7 +4,7 @@ component:
   type: application
   id: goreecloud-social
   product_name: GoreeCloud Social
-  repository: GoreeCloud/goreecloud-social
+  repository: GoreeCloud/social
 
 lifecycle: development
 version: 0.1.0-dev.6
