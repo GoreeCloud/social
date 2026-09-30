@@ -26,7 +26,7 @@
 - Community capability decisions that separate Social-local role eligibility from authoritative GoreeCloud Identity subject binding; moderator/admin/owner authority remains local to one community and never becomes platform-wide authority.
 - Read-only liveness, readiness, and source-status endpoints.
 - Responsive Development interface shell.
-- Repository CI and Platform Contract v0.4 nine-system declaration.
+- Repository CI and Platform Contract 2.0 declaration with lifecycle Forge and all nine Integral Platform Systems.
 
 ## Planned product capabilities
 
