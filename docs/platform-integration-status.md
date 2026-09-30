@@ -1,6 +1,6 @@
 # GoreeCloud Social — Platform Integration Status
 
-All **nine** Integral Platform Systems are applicable to GoreeCloud Social under Platform Contract 0.4. None has completed application-specific acceptance in the current Development foundation.
+All **nine** Integral Platform Systems are applicable to GoreeCloud Social under Platform Contract 2.0. None has completed application-specific acceptance in the current Development foundation.
 
 - **GoreeCloud Manager — blocked.** Bounded health/status routes exist, but no Manager registration, moderation workflow integration, or acceptance exists.
 - **Privacy Shield — blocked.** Data-minimizing source boundaries are documented, including moderation/report evidence requirements, but no accepted Privacy Shield purpose, consent/policy, retention, deletion, export, disclosure, or evidence-access enforcement exists.
@@ -12,4 +12,4 @@ All **nine** Integral Platform Systems are applicable to GoreeCloud Social under
 - **GoreeCloud Policy — blocked.** Community capability, moderation, privacy/security, exception, explanation, and evidence decisions require future Policy integration, but no accepted Social Policy runtime exists.
 - **GoreeCloud Observability — blocked.** Liveness, readiness, and bounded source-status surfaces exist, but accepted metrics, logs, events, traces, dependency-health, provenance/freshness, alerting, and target-environment evidence do not.
 
-The Platform Contract manifest therefore records overall conformance as `nonconformant` and carries no fabricated acceptance or release evidence. Development source and passing CI do not establish Identity, Privacy Shield, Wardveil Security, Everkeep, Manager, Mesh, Policy, Observability, Glaze UI, Stable, deployment, or production acceptance.
+The Platform Contract 2.0 manifest therefore records lifecycle `forge`, deployment state `development`, qualification `not-started`, next gate `weave`, and overall conformance as `nonconformant` and carries no fabricated acceptance or release evidence. Development source and passing CI do not establish Identity, Privacy Shield, Wardveil Security, Everkeep, Manager, Mesh, Policy, Observability, Glaze UI, Stable, deployment, or production acceptance.
