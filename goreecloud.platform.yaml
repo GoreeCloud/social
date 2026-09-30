@@ -126,7 +126,7 @@ evidence:
 conformance:
   status: nonconformant
   validated_at: null
-  evidence: [README.md, SPECIFICATIONS.md, docs/platform-integration-status.md, docs/security.md, docs/privacy.md, docs/recovery.md, src/social/models.py, src/social/services.py, src/social/views.py, src/social/migrations/0003_content_interactions.py, src/social/migrations/0004_social_graph_community.py, src/social/migrations/0005_trust_safety_groundwork.py, tests/test_models.py, tests/test_visibility.py, tests/test_feeds.py, VERSION]
+  evidence: [README.md, SPECIFICATIONS.md, docs/platform-integration-status.md, docs/security.md, docs/privacy.md, docs/recovery.md, docs/research/community-governance-reforge.md, src/social/models.py, src/social/services.py, src/social/community.py, src/social/views.py, src/social/migrations/0003_content_interactions.py, src/social/migrations/0004_social_graph_community.py, src/social/migrations/0005_trust_safety_groundwork.py, tests/test_models.py, tests/test_visibility.py, tests/test_feeds.py, tests/test_communities.py, VERSION]
   blockers:
     - GoreeCloud Social remains Development source and has no Stable or production-approved release.
     - GoreeCloud Identity authentication, session, scope, delegated-moderation, and application acceptance are incomplete.
