@@ -70,7 +70,8 @@ def service_status(request):
         "product": "GoreeCloud Social",
         "component_id": "goreecloud-social",
         "version": __version__,
-        "lifecycle": "development",
+        "lifecycle": "forge",
+        "deployment_state": "development",
         "production_ready": False,
         "capabilities": [
             "social-profile-metadata",
