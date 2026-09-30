@@ -19,7 +19,7 @@ The native Development foundation establishes:
 - internal Following and Chronological feed read models that reuse the same visibility and relationship-safety boundary;
 - dev.7 Community Governance services for public/private/invite-only community discovery, community-scoped post/rule reads, explicit moderator/admin/owner capability decisions, and protected internal join-request, membership, and moderation queues;
 - a responsive Glaze-oriented development shell for Home, Discover, Video, Communities, and Profile surfaces without claiming Glaze UI acceptance;
-- repository documentation, tests, CI, and a Platform Contract v0.2 declaration that truthfully records unfinished platform integrations.
+- repository documentation, tests, CI, and a Platform Contract v0.4 declaration covering all nine Integral Platform Systems while truthfully recording unfinished integrations.
 
 The collection, invitation, join-request, rule, reply, bookmark, poll, feed, restriction, reporting, ban, case/action, appeal, and dev.7 Community Governance foundations are internal Development domain/query capabilities only. dev.7 distinguishes Social-local role eligibility from authoritative actor identity and fails closed unless an explicitly authoritative actor subject matches the Social profile Identity subject. It does not authenticate sessions, expose public mutation or personalized-feed endpoints, or establish accepted Identity-backed authorization, moderation authority, anti-spam, rate controls, impersonation handling, malicious-link/file/media protection, age-eligibility controls, recommendation ranking, production feed delivery, or client synchronization.
 
