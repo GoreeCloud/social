@@ -6,7 +6,7 @@
 **As of:** 2026-09-30  
 **Canonical repository:** `GoreeCloud/social`  
 **Current Development source:** `0.1.0-dev.7`  
-**Platform Contract:** `0.4` — nine systems represented; application remains nonconformant
+**Platform Contract:** `2.0` — lifecycle `forge`; nine systems represented; application remains nonconformant
 
 ## Roadmap
 
@@ -23,7 +23,7 @@
 | FR-030 | Public Following/Chronological APIs plus Discover/For You, Video, media, and recommendation controls with transparent user choice. | P1 | Internal Following/Chronological read models exist; public delivery and recommendation systems remain planned |
 | FR-040 | Production media pipeline: authorized upload, validation, Wardveil evaluation, metadata handling, image derivatives, transcoding, captions/subtitles, storage, streaming, deletion, and export. | P0 | Planned |
 | FR-050 | Glaze UI V1.6 / 1.6.0 consumer adoption with Social-specific responsive, accessibility, form-factor, performance, rollback, Human Visual Excellence, and production acceptance. | P0 | Required; current shell is Development-only and unaccepted |
-| FR-060 | Complete Platform Contract 0.4 integrations for Manager, Privacy Shield, Wardveil Security, Everkeep, Glaze UI, Mesh, Identity, Policy, and Observability. | P0 | Manifest reconciled to 0.4; all application-specific acceptance remains fail-closed |
+| FR-060 | Complete Platform Contract 2.0 integrations for Manager, Privacy Shield, Wardveil Security, Everkeep, Glaze UI, Mesh, Identity, Policy, and Observability. | P0 | Manifest reconciled to 2.0 / Forge; all application-specific acceptance remains fail-closed |
 | FR-070 | Everkeep backup/restore, portable export, migration, retention reconciliation, and recovery testing for permitted Social data. | P0 | Planned |
 | FR-080 | Notifications, Messenger sharing, Universal Search, authorized Contacts discovery, deep links, and bounded Social events through GoreeCloud Mesh. | P1 | Planned |
 
