@@ -22,9 +22,11 @@
 - Ordinary read visibility that excludes authors blocked by the viewer, authors who have blocked the viewer, and authors muted by the viewer.
 - Active non-expired space-ban enforcement for protected space-audience reads and space-sourced Following feed content.
 - Internal Following and Chronological feed read models that compose on the authoritative visibility boundary instead of duplicating audience or relationship-safety rules.
+- Community Governance dev.7 services for public/private/invite-only community discovery, community-scoped post/rule reads, explicit named community capabilities, and internal join-request/membership/moderation queues guarded by fail-closed capability checks.
+- Community capability decisions that separate Social-local role eligibility from authoritative GoreeCloud Identity subject binding; moderator/admin/owner authority remains local to one community and never becomes platform-wide authority.
 - Read-only liveness, readiness, and source-status endpoints.
 - Responsive Development interface shell.
-- Repository CI and Platform Contract v0.2 declaration.
+- Repository CI and Platform Contract v0.4 nine-system declaration.
 
 ## Planned product capabilities
 
@@ -35,7 +37,7 @@
 - Public feed APIs and client surfaces for Following and Chronological, plus Discover/For You, Communities, Groups, Video, media, and optional Trending experiences.
 - Recommendation transparency, topic/signal controls, reset controls, and less-personalized feed options.
 - Authenticated private-profile follow-request workflows, list/circle management and custom-audience APIs, and richer profile surfaces.
-- Full group/community invitation and join-request workflows, role-capability authorization, ownership transfer, moderator teams, queues, member approvals, bans, announcements, pinned content, and rule-acknowledgement behavior.
+- Authenticated group/community invitation and join-request mutation workflows, accepted Identity-backed capability enforcement, ownership transfer, moderator teams, member approvals, ban mutations, announcements, pinned content, and rule-acknowledgement behavior. dev.7 provides only internal capability/read groundwork.
 - Authenticated restrict, reporting, space-ban, moderation-case/action/appeal, block, and mute mutation workflows with accepted GoreeCloud Identity authorization.
 - Production anti-spam, rate/resource controls, bot and automation controls, scraping defenses, impersonation handling, appeals/review operations, and mature moderation evidence.
 - Wardveil-integrated malicious-link/file/media protection and privileged-action protection with current evidence; source-only safety records do not establish Wardveil acceptance.
@@ -43,4 +45,4 @@
 - Age-appropriate controls only where required and approved, using minimized eligibility information rather than unnecessary raw age/identity data.
 - Notifications, GoreeCloud Messenger sharing, Universal Search, and authorized Contacts discovery through GoreeCloud Mesh.
 - Everkeep backup/restore, portable export, migration, and account-transition support.
-- Glaze UI 1.1.0 acceptance across responsive web and future dedicated clients.
+- Glaze UI 1.6.0 source adoption and application-specific acceptance across responsive web and future dedicated clients.
