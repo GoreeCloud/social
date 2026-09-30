@@ -16,6 +16,22 @@ class HealthTests(TestCase):
         response = self.client.get("/api/v1/status/")
         payload = response.json()
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(payload["lifecycle"], "development")
+        self.assertEqual(payload["lifecycle"], "forge")
+        self.assertEqual(payload["deployment_state"], "development")
         self.assertFalse(payload["production_ready"])
+        self.assertEqual(
+            set(payload["platform_integrations"]),
+            {
+                "manager",
+                "privacy_shield",
+                "wardveil_security",
+                "everkeep",
+                "glaze_ui",
+                "mesh",
+                "identity",
+                "policy",
+                "observability",
+            },
+        )
         self.assertEqual(set(payload["platform_integrations"].values()), {"blocked"})
+        self.assertIn("community-governance-and-scoped-read-models", payload["capabilities"])
