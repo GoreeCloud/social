@@ -12,6 +12,8 @@ PLATFORM_INTEGRATIONS = {
     "glaze_ui": "blocked",
     "mesh": "blocked",
     "identity": "blocked",
+    "policy": "blocked",
+    "observability": "blocked",
 }
 
 
@@ -84,6 +86,7 @@ def service_status(request):
             "social-collections-and-community-workflow-domain",
             "trust-safety-domain-groundwork",
             "active-space-ban-protected-read-enforcement",
+            "community-governance-and-scoped-read-models",
         ],
         "platform_integrations": PLATFORM_INTEGRATIONS,
     })
