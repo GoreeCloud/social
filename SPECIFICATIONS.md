@@ -4,7 +4,7 @@
 
 GoreeCloud Social is an original, first-party GoreeCloud Suite application that combines several forms of social interaction in one coherent platform instead of reproducing separate incompatible products for short-form video, public conversation, personal profiles, groups, and communities.
 
-The canonical product identity for this project is **GoreeCloud Social**. The approved short label is **Social** when the surrounding GoreeCloud context already establishes ownership. The repository is `GoreeCloud/goreecloud-social`. The application identifier mapping is intended to use the `social` suffix under the GoreeCloud reverse-DNS namespace, resulting in `com.goreecloud.social` where that identifier form applies.
+The canonical product identity for this project is **GoreeCloud Social**. The approved short label is **Social** when the surrounding GoreeCloud context already establishes ownership. The canonical repository is `GoreeCloud/social`. The application identifier mapping is intended to use the `social` suffix under the GoreeCloud reverse-DNS namespace, resulting in `com.goreecloud.social` where that identifier form applies.
 
 GoreeCloud Social is a prefixed GoreeCloud-family product and a GoreeCloud Suite member. It is original GoreeCloud-owned software rather than a maintained fork or rebrand of TikTok, X/Twitter, Facebook, Mastodon, or another social platform.
 
@@ -111,9 +111,13 @@ Groups and communities are first-class social spaces, not tags around ordinary p
 
 A space can be public, private, or invitation-only. The Development domain includes explicit `SpaceInvitation`, `SpaceJoinRequest`, ordered `SpaceRule`, and `SpaceBan` records in addition to `SpaceMembership`. Invitation validation rejects an invitee who is already an accepted member. Join-request validation rejects a requester who is already an accepted member. Database constraints prevent duplicate current records under the current Development model, prevent self-invitations, keep rule positions unique within a space, and keep one current `SpaceBan` row per space/profile.
 
-These records are structural groundwork, not completed community workflows. Public invitation, join-request, list/circle, rule-management, role-management, ownership-transfer, membership-approval, ban-management, or moderation APIs do not exist. The current source does not claim that a moderator/admin role label, `imposed_by_subject`, `opened_by_subject`, or `actor_subject` field proves authorization for a privileged action.
+These records began as structural groundwork. Development version `0.1.0-dev.7` adds an internal Community Governance policy/read layer in `src/social/community.py`. It provides public/private/invite-only community discovery, community-scoped post and rule reads, named moderator/administrator/owner capabilities, and protected internal query services for pending join requests, manageable memberships, and active moderation cases.
 
-Future policy should support explicit role capabilities, moderator teams, pinned content, announcements, richer bans/restrictions, content approval, moderation queues, rule acknowledgement, ownership transfer, and scoped discovery. Administrative capability inside a space does not grant platform-wide authority. Community delegation must use GoreeCloud Identity-scoped authority when implemented, and moderator actions must remain auditable and subject to Wardveil and Privacy Shield requirements.
+A local role label is still not sufficient authorization. A positive privileged decision requires both a locally eligible accepted role and an explicitly authoritative actor subject that exactly matches the Social profile's external GoreeCloud Identity subject. The service fails closed for missing Identity authority, subject mismatch, non-members, active community bans, unsupported capabilities, and non-community spaces. The decision is community-local and never grants platform-wide authority.
+
+Public invitation, join-request, list/circle, rule-management, role-management, ownership-transfer, membership-approval, ban-management, pin/announcement, or moderation mutation APIs still do not exist. The current source does not authenticate Identity sessions or claim accepted Identity, Privacy Shield, Wardveil Security, Policy, or audit integration.
+
+Future policy and implementation must add authenticated mutation workflows, moderator teams, pinned content, announcements, richer bans/restrictions, content approval, moderation queues, rule acknowledgement, ownership transfer, and mature scoped discovery. Administrative capability inside a community must remain local to that community.
 
 ## 7. Media architecture
 
@@ -190,7 +194,7 @@ Wardveil Security must protect account/session operations, privileged moderation
 
 The Development server uses bounded read-only health/status routes and deliberately avoids unauthenticated social write, moderation-write, and personalized-feed routes. Relationship-safety, feed, social-collection/community-workflow, threaded-reply, bookmark, poll, reporting, ban, moderation-case/action, and appeal state are currently exercised through internal domain/query services only. Active space-ban read enforcement is Social application logic, not Wardveil acceptance.
 
-No Wardveil runtime adapter, malicious-link/file/media evaluation, privileged-action enforcement contract, security evidence acceptance, or production safety qualification is implemented by this milestone. Passing source CI does not establish Wardveil Security integration or acceptance.
+No Wardveil runtime adapter, malicious-link/file/media evaluation, accepted privileged-action enforcement, security evidence acceptance, or production safety qualification is implemented by this milestone. dev.7 Community Governance capability decisions are Social-local fail-closed source policy only and do not substitute for Wardveil or Identity authorization. Passing source CI does not establish Wardveil Security integration or acceptance.
 
 ## 13. GoreeCloud Mesh integration
 
@@ -224,7 +228,7 @@ The status endpoint provides bounded source identity for later management integr
 
 All user-facing Social surfaces must use the current Stable Glaze UI consumer baseline and pass application-specific visual, responsive, touch, keyboard, reduced-motion, contrast, text-scaling, screen-reader, and platform acceptance before Stable eligibility.
 
-The repository contains a responsive, accessible development shell that establishes information architecture only. It does not claim Glaze UI 1.2.0 conformance or acceptance.
+The repository contains a responsive, accessible development shell that establishes information architecture only. It does not claim Glaze UI 1.6.0 conformance or acceptance.
 
 Primary mobile navigation is intended to center on Home, Discover, Create, Communities, and Profile, with notification and Messenger access available through shared GoreeCloud surfaces. Larger displays may expand to a multi-column layout while preserving the same information architecture.
 
@@ -327,3 +331,20 @@ Subsequent milestones should prioritize, in order:
 9. Mesh notifications, Messenger sharing, Contacts discovery, Universal Search, and events;
 10. Everkeep backup/restore/export acceptance and production deployment qualification;
 11. dedicated client applications when justified by the shared client strategy.
+
+## 21. September 30, 2026 — Community Governance dev.7
+
+Development version `0.1.0-dev.7` adds bounded Community Governance source without exposing public community write APIs.
+
+Implemented source:
+- `src/social/community.py` with explicit named community capabilities and conservative moderator/admin/owner role mappings;
+- public/private/invitation-only community discovery that excludes active-banned viewers;
+- community-scoped post and active-rule read models;
+- privileged internal join-request, membership, and moderation-case query services;
+- positive privileged decisions only when Social-local role eligibility and an explicitly authoritative matching external Identity subject are both present;
+- space-local authority with `platform_wide_authority=false`;
+- regression coverage in `tests/test_communities.py`;
+- Reforge research in `docs/research/community-governance-reforge.md`;
+- Platform Contract 2.0 / canonical Forge lifecycle / nine-system manifest reconciliation with all application-specific systems remaining fail-closed where acceptance is absent.
+
+This Forge-stage tranche does not establish accepted GoreeCloud Identity authentication, public community mutation APIs, Privacy Shield policy, Wardveil Security enforcement, GoreeCloud Policy runtime decisions, Observability acceptance, Glaze UI V1.6 consumer acceptance, deployment, production acceptance, or Stable status.

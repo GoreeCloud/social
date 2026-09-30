@@ -17,12 +17,13 @@ The native Development foundation establishes:
 - audience-aware post visibility for public, followers, mutual relationships, spaces, and private-to-self content;
 - ordinary read visibility that enforces bilateral blocks, viewer-selected mutes, and active non-expired space bans for protected space-audience reads;
 - internal Following and Chronological feed read models that reuse the same visibility and relationship-safety boundary;
+- dev.7 Community Governance services for public/private/invite-only community discovery, community-scoped post/rule reads, explicit moderator/admin/owner capability decisions, and protected internal join-request, membership, and moderation queues;
 - a responsive Glaze-oriented development shell for Home, Discover, Video, Communities, and Profile surfaces without claiming Glaze UI acceptance;
-- repository documentation, tests, CI, and a Platform Contract v0.2 declaration that truthfully records unfinished platform integrations.
+- repository documentation, tests, CI, and a Platform Contract 2.0 declaration covering all nine Integral Platform Systems and the canonical lifecycle model while truthfully recording unfinished integrations.
 
-The collection, invitation, join-request, rule, reply, bookmark, poll, feed, restriction, reporting, ban, case/action, and appeal foundations are internal Development domain/query capabilities only. They do not expose public mutation or personalized-feed endpoints and do not establish production role-capability authorization, moderation authority, anti-spam, rate controls, impersonation handling, malicious-link/file/media protection, age-eligibility controls, recommendation ranking, production feed delivery, authentication, or client synchronization.
+The collection, invitation, join-request, rule, reply, bookmark, poll, feed, restriction, reporting, ban, case/action, appeal, and dev.7 Community Governance foundations are internal Development domain/query capabilities only. dev.7 distinguishes Social-local role eligibility from authoritative actor identity and fails closed unless an explicitly authoritative actor subject matches the Social profile Identity subject. It does not authenticate sessions, expose public mutation or personalized-feed endpoints, or establish accepted Identity-backed authorization, moderation authority, anti-spam, rate controls, impersonation handling, malicious-link/file/media protection, age-eligibility controls, recommendation ranking, production feed delivery, or client synchronization.
 
-This source does **not** yet provide production authentication, public social or moderation write APIs, public personalized feed APIs, production media upload/transcoding, production abuse detection, Wardveil-integrated scanning/protection, Privacy Shield moderation-data acceptance, recommendation ranking, notifications, live streaming, mature moderation operations, production storage, mobile applications, production deployment, or accepted integrations with GoreeCloud Identity, Privacy Shield, Wardveil Security, Everkeep, GoreeCloud Mesh, GoreeCloud Manager, or Glaze UI.
+This source does **not** yet provide production authentication, public social or moderation write APIs, public personalized feed APIs, production media upload/transcoding, production abuse detection, Wardveil-integrated scanning/protection, Privacy Shield moderation-data acceptance, recommendation ranking, notifications, live streaming, mature moderation operations, production storage, mobile applications, production deployment, or accepted integrations with GoreeCloud Identity, Privacy Shield, Wardveil Security, Everkeep, GoreeCloud Mesh, GoreeCloud Manager, GoreeCloud Policy, GoreeCloud Observability, or Glaze UI.
 
 ## Development setup
 
@@ -85,7 +86,7 @@ Passing source CI does not establish production deployment, platform-system acce
 
 ## Platform Contract
 
-This repository carries a schema-version `0.2` `goreecloud.platform.yaml` declaration. It records the application as Development and nonconformant while required Integral Platform System integrations and acceptance evidence remain incomplete.
+This repository carries a schema-version `2.0` `goreecloud.platform.yaml` declaration with exactly nine Integral Platform Systems. It records the application at the Forge lifecycle stage with development deployment state and nonconformant platform status while required Integral Platform System integrations and acceptance evidence remain incomplete.
 
 ## License
 
