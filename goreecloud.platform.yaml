@@ -1,4 +1,4 @@
-schema_version: '0.4'
+schema_version: '2.0'
 
 component:
   type: application
@@ -6,7 +6,21 @@ component:
   product_name: GoreeCloud Social
   repository: GoreeCloud/social
 
-lifecycle: development
+lifecycle: forge
+lifecycle_metadata:
+  flags:
+    - migration-required
+  deployment_state: development
+  qualification_state: not-started
+  next_gate: weave
+  candidate_identity: null
+  last_transition: null
+  evidence:
+    - README.md
+    - SPECIFICATIONS.md
+    - IMPLEMENTED-FEATURES.md
+    - PLANNED-FEATURES.md
+    - CHANGELOGS.md
 version: 0.1.0-dev.7
 
 supported_platforms:
@@ -114,9 +128,9 @@ external_dependencies:
     version_constraint: 5.2.17
 
 compatibility:
-  platform_contract: '0.4'
+  platform_contract: '2.0'
   glaze_ui_required: 1.6.0
-  requires: [goreecloud-platform-contract==0.4, glaze-ui==1.6.0]
+  requires: [goreecloud-platform-contract==2.0, glaze-ui==1.6.0]
   provides: [goreecloud-social-api-v1, goreecloud-social-domain-v1]
 
 evidence:
