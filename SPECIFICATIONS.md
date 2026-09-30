@@ -345,6 +345,6 @@ Implemented source:
 - space-local authority with `platform_wide_authority=false`;
 - regression coverage in `tests/test_communities.py`;
 - Reforge research in `docs/research/community-governance-reforge.md`;
-- Platform Contract 0.4 / nine-system manifest reconciliation with all application-specific systems remaining fail-closed where acceptance is absent.
+- Platform Contract 2.0 / canonical Forge lifecycle / nine-system manifest reconciliation with all application-specific systems remaining fail-closed where acceptance is absent.
 
-This tranche does not establish accepted GoreeCloud Identity authentication, public community mutation APIs, Privacy Shield policy, Wardveil Security enforcement, GoreeCloud Policy runtime decisions, Observability acceptance, Glaze UI V1.6 consumer acceptance, deployment, production acceptance, or Stable status.
+This Forge-stage tranche does not establish accepted GoreeCloud Identity authentication, public community mutation APIs, Privacy Shield policy, Wardveil Security enforcement, GoreeCloud Policy runtime decisions, Observability acceptance, Glaze UI V1.6 consumer acceptance, deployment, production acceptance, or Stable status.
